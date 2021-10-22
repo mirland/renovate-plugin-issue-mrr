@@ -3,6 +3,15 @@ plugins {
     id 'kotlin-android'
 }
 
+apply plugin: "com.github.konifar.gradle.unused-resources-remover"
+
+unusedResourcesRemover {
+    extraRemovers = [
+            createXmlValueRemover("defaults", "integer", "integer")
+    ]
+    excludeNames = ["attrs_proportional_layout.xml"]
+}
+
 android {
     compileSdk 31
 
