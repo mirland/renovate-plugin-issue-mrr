@@ -7,9 +7,6 @@ apply plugin: "com.github.konifar.gradle.unused-resources-remover"
 apply from: rootProject.file('versions.gradle')
 
 unusedResourcesRemover {
-    extraRemovers = [
-            createXmlValueRemover("defaults", "integer", "integer")
-    ]
     excludeNames = ["attrs_proportional_layout.xml"]
 }
 
