@@ -3,12 +3,9 @@ plugins {
     id 'kotlin-android'
 }
 
-apply plugin: "com.github.konifar.gradle.unused-resources-remover"
+
 apply from: rootProject.file('versions.gradle')
 
-unusedResourcesRemover {
-    excludeNames = ["attrs_proportional_layout.xml"]
-}
 
 android {
     compileSdk 31
